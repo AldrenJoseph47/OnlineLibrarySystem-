@@ -1,0 +1,132 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5fff3;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #00796b;
+}
+
+.books {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.book {
+    border: 2px solid #a6a6a6;
+    background-color: #e5ffe0;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    width: 150px;
+}
+
+.book img {
+    width: 100px;
+    height: 150px;
+}
+
+.book-details {
+    margin: 10px 0;
+}
+
+.rating {
+    color: #f39c12;
+}
+
+.summary {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.social-icons img {
+    width: 20px;
+    margin: 0 5px;
+}
+
+/* header styles */
+header {
+    background-color: #00796b; /* Teal color */
+    width: 97%;
+    height: 75px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    height: 50px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0 10px;
+    position: relative;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-weight: bold;
+    transition: 0.4s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #00382e; /* Darker teal on hover */
+}
+
+
+/* footer styles */
+footer {
+    background-color: #00796b; /* Teal color */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    margin-top: auto; /* Ensure footer is at the bottom */
+}
+
+footer p {
+    margin: 0;
+}
+
+footer .social-icons {
+    margin-top: 10px;
+}
+
+footer .social-icons a {
+    margin: 0 10px;
+    font-size: 1.5em;
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+}
+
+footer .social-icons a:hover {
+    color: #d32f2f; /* Change color on hover */
+}
+
+footer .social-icons a img {
+    width: 30px;
+    height: 30px;
+}
+
+footer .social-icons a:hover img {
+    opacity: 0.8;
+}

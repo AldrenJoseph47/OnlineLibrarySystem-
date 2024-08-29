@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins',sans-serif;
+}
+body {
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.5) 30%, rgba(0,0,0,0.5) 30%), url(../Icons/backgroundIMG.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0; /* Ensure no extra margins */
+}
+
+header {
+    background-color: #00796b; /* Teal color */
+    width: 100%;
+    height: 75px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    height: 50px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0 10px;
+    position: relative;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-weight: bold;
+    transition: 0.4s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #00382e; /* Darker teal on hover */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #00796b;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 5px;
+    margin-top: 10px;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.dropdown-content li a {
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-content li a:hover {
+    background-color: #005f4f; /* Darker teal on hover */
+}
+
+nav ul li:hover .dropdown-content {
+    display: block;
+    opacity: 1;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+    padding-top: 75px; /* To prevent overlap with the fixed header */
+    padding-bottom: 20px; /* To provide space for the footer */
+    margin-top: 75px; /* Additional spacing to account for fixed header */
+}
+
+.book-container {
+    background-color: rgba(0, 0, 0, 0.7); /* Dark background for readability */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    margin-top: 15px; /* Additional spacing */
+}
+
+.book-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.book-details img {
+    max-width: 52%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.description {
+    text-align: left;
+    max-width: 600px;
+}
+
+.rating .stars {
+    color: gold;
+    font-size: 1.5em;
+}
+
+.rent-btn {
+    background-color: #00796b; /* Teal color */
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px; /* Spacing above the button */
+    text-decoration: none;
+    display: inline-block;
+}
+
+.rent-btn:hover {
+    background-color: #004d40; /* Darker teal on hover */
+}
+
+.rent-btn a {
+    color: white;
+    text-decoration: none;
+}
+
+footer {
+    background-color: #00796b; /* Teal color */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    margin-top: auto; /* Push footer to the bottom */
+}
+
+footer p {
+    margin: 0;
+}
+
+footer .social-icons {
+    margin-top: 10px;
+}
+
+footer .social-icons a {
+    margin: 0 10px;
+    font-size: 1.5em;
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+}
+
+footer .social-icons a:hover {
+    color: #d32f2f; /* Change color on hover */
+}
+
+footer .social-icons a img {
+    width: 30px;
+    height: 30px;
+}
+
+footer .social-icons a:hover img {
+    opacity: 0.8;
+}

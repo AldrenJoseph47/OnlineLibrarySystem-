@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Subscription Plans</title>
+    <link rel="stylesheet" href="../css/plan.css">
+    <script src="../js/project.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../Icons/logo.png" alt="Library Logo">
+        </div>
+    </header>
+
+    <main>
+        <div class="content-box">
+            <h1>Choose Your Subscription Plan</h1>
+            <div class="plans">
+                <label class="plan-option">
+                    <input type="radio" name="plan" value="6months" onchange="showBenefits('6months')">
+                    <span>6 Months Plan - ₹499</span>
+                    <div id="6months-benefits" class="benefits">
+                        <ul>
+                            <li>Access to all eBooks</li>
+                            <li>Monthly newsletter</li>
+                            <li>Priority support</li>
+                        </ul>
+                    </div>
+                </label>
+                <label class="plan-option">
+                    <input type="radio" name="plan" value="1year" onchange="showBenefits('1year')">
+                    <span>1 Year Plan - ₹699</span>
+                    <div id="1year-benefits" class="benefits">
+                        <ul>
+                            <li>Access to all eBooks</li>
+                            <li>Monthly newsletter</li>
+                            <li>Priority support</li>
+                            <li>2 Free Books</li>
+                        </ul>
+                    </div>
+                </label>
+                <label class="plan-option">
+                    <input type="radio" name="plan" value="2years" onchange="showBenefits('2years')">
+                    <span>2 Years Plan - ₹1499</span>
+                    <div id="2years-benefits" class="benefits">
+                        <ul>
+                            <li>Access to all eBooks</li>
+                            <li>Monthly newsletter</li>
+                            <li>Priority support</li>
+                            <li>5 Free Books</li>
+                        </ul>
+                    </div>
+                </label>
+            </div>
+            <button class="payment-button" onclick="goToPayment()">Proceed to Payment</button>
+        </div>
+        
+    </main>
+    <br><br>
+    <footer>
+        <p>2024 Your Company. All rights reserved. Aldren and Samuel</p>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/faith_infotech" target="_blank"><img src="../Icons/insta_icon.png" alt="Instagram Icon"></a>
+            <a href="https://www.facebook.com/Faithinfotechacademytechnopark" target="_blank"><img src="../Icons/facebook_icon.jpg" alt="Facebook Icon"></a>
+            <a href="https://faithinfotechacademy.com" target="_blank"><img src="../Icons/website.jpg" alt="Website Icon"></a>
+        </div>
+    </footer>
+
+    <script src="../js/project.js"></script>
+</body>
+</html>

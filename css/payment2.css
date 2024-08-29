@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #bfff91;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: #232f3e;
+    color: white;
+    padding: 10px 0;
+    text-align: left;
+    padding-left: 20px;
+}
+.logo img {
+    width: 80px;
+}
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.checkout-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+section {
+    margin-bottom: 20px;
+}
+h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+.order-summary {
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+}
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+.summary-total {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.checkout-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff9900;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #232f3e;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}

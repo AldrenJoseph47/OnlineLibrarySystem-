@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Login</title>
+    <link rel="stylesheet" href="../css/adminlogin.css">
+    <script src="../js/admin.js" defer></script>
+</head>
+<body>
+    <div class="logo">
+        <img src="../Icons/logo.png" alt="Library Logo">
+    </div>
+    <div class="login-container">
+        <h1>Admin Login</h1>
+        <form id="login-form">
+            <div class="form-group">
+                <label for="admin-id">Admin ID</label>
+                <input type="text" id="admin-id" name="admin-id" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit" class="login-button">Sign In</button>
+            <a href="#" class="forgot-password" onclick="forgotPassword()">Forgot Password?</a>
+        </form>
+    </div>
+</body>
+</html>

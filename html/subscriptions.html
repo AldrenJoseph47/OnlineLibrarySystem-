@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Subscription List</title>
+    <link rel="stylesheet" href="../css/subscriptions.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../Icons/logo.png" alt="Library Logo">
+        </div>
+        <div class="header-actions">
+            <a href="../html/admin.html" class="profile-icon">
+                <img src="../Icons/profile.png" alt="Profile Icon">
+            </a>
+            <a href="../html/adminlogin.html" class="logout-button">Logout</a>
+        </div>
+    </header>
+    
+    <main class="container">
+        <h1>Subscription List</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Subscription Plan</th>
+                    <th>Membership Status</th>
+                    <th>Expiry Date</th>
+                    <th>Books Rented</th>
+                    <th>Rent Rate (Rs)</th> <!-- Added Rent Rate Column -->
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Roopak Ramesh</td>
+                    <td>1 Year</td>
+                    <td>Active</td>
+                    <td>08/09/2024</td>
+                    <td>Wings of Fire<br> I Don't Love You Anymore</td>
+                    <td>₹73.5</td> <!-- Static example rate -->
+                </tr>
+                <tr>
+                    <td>Jesly Jomon</td>
+                    <td>6 Months</td>
+                    <td>Active</td>
+                    <td>14/08/2025</td>
+                    <td>Alice in wonderland</td>
+                    <td>₹103.5</td> <!-- Static example rate -->
+                </tr>
+                <tr>
+                    <td>Aswin Ajith</td>
+                    <td>2 Year</td>
+                    <td>Active</td>
+                    <td>25/08/2026</td>
+                    <td>Alice in wonderland<br> Adventures of Sherlock Holmes</td>
+                    <td>173.5</td> <!-- Static example rate -->
+                </tr>
+                <tr>
+                    <td>Tinu Varghese</td>
+                    <td>1 Year</td>
+                    <td>Active</td>
+                    <td>18/09/2024</td>
+                    <td>Elon Musk<br> Adventures of Sherlock Holmes
+                    <td>₹133.5</td> <!-- Static example rate -->
+                </tr>
+                <tr>
+                    <td>Samuel Jacob</td>
+                    <td>2 Year</td>
+                    <td>Active</td>
+                    <td>02/01/2026</td>
+                    <td>Wings of Fire<br>Elon Musk by Walter Isaacson</td>
+                    <td>₹93.5</td> <!-- Static example rate -->
+                </tr>
+                <tr>
+                    <td>Anusha Anil</td>
+                    <td>6 Months</td>
+                    <td>Active</td>
+                    <td>29/12/2024</td>
+                    <td>She Said<br>As Good as Dead</td>
+                    <td>₹103.5</td> <!-- Static example rate -->
+                </tr>
+                <!-- Add more predefined user details as needed -->
+            </tbody>
+        </table>
+    </main>
+    
+    <footer>
+        <p>&copy;2024 Your Company. All rights reserved. Aldren and Samuel</p>
+    </footer>
+    <!-- <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('../data/payments.json')
+                .then(response => response.json())
+                .then(data => {
+                    const tableBody = document.querySelector('table tbody');
+                    data.forEach(user => {
+                        const row = document.createElement('tr');
+                        
+                        // Generate a random rent rate between 100 and 1000 rupees
+                        const rentRate = Math.floor(Math.random() * (1000 - 100 + 1)) + 100;
+                        
+                        row.innerHTML = `
+                            <td>${user.name}</td>
+                            <td>${user.subscriptionPlan}</td>
+                            <td>${user.membershipStatus}</td>
+                            <td>${user.expiryDate}</td>
+                            <td>${user.booksRented}</td>
+                            <td>₹${rentRate}</td> Added Rent Rate 
+                        `;
+                        
+                        tableBody.appendChild(row);
+                    });
+                })
+                .catch(error => console.error('Error fetching payment data:', error));
+        });
+    </script> -->
+</body>
+</html>

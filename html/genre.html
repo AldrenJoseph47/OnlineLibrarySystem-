@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Genre | Online Library</title>
+    <link rel="stylesheet" href="../css/genre.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../Icons/logo.png" alt="Library Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../html/home.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)">Genre</a>
+                    <ul class="dropdown-content">
+                        <li><a href="../html/research.html">Research</a></li>
+                        <li><a href="../html/poetry.html">Poetry</a></li>
+                        <li><a href="../html/technology.html">Technology</a></li>
+                        <li><a href="../html/genre.html">More</a></li>
+                    </ul>
+                </li>
+                <li><a href="../html/author.html">Authors</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Genres</h1>
+        <p>Explore books by genre.</p>
+        <div class="search-container">
+            <input class="search" placeholder="Search here...">
+            <button class="btn">Search</button>
+        </div>
+        <section class="genres">
+            <div class="genre">
+                <h2>Autobiography</h2>
+                <p>Books that tell the story of a person's life written by that person.</p>
+            </div>
+            <div class="genre">
+                <h2>Fantasy</h2>
+                <p>Books that feature magical elements and imaginary worlds.</p>
+            </div>
+            <div class="genre">
+                <h2>Romance</h2>
+                <p>Books centered around love and romantic relationships.</p>
+            </div>
+            <div class="genre">
+                <h2>Paranormal</h2>
+                <p>Books featuring supernatural events and creatures.</p>
+            </div>
+            <div class="genre">
+                <h2>Historical Fiction</h2>
+                <p>Books set in the past, often with fictional elements.</p>
+            </div>
+            <div class="genre">
+                <h2>Research</h2>
+                <p>Books that provide in-depth analysis and studies on various subjects.</p>
+            </div>
+            <div class="genre">
+                <h2>Crime Fiction</h2>
+                <p>Books focused on crime and detective stories.</p>
+            </div>
+            <div class="genre">
+                <h2>Science Fantasy</h2>
+                <p>Books combining elements of science fiction and fantasy.</p>
+            </div>
+            <div class="genre">
+                <h2>Journalism</h2>
+                <p>Books that provide detailed accounts of real-world events and issues.</p>
+            </div>
+            <div class="genre">
+                <h2>Philosophy</h2>
+                <p>Books exploring fundamental questions about existence, knowledge, and ethics.</p>
+            </div>
+            <div class="genre">
+                <h2>Psychology</h2>
+                <p>Books that study the human mind and behavior.</p>
+            </div>
+            <div class="genre">
+                <h2>Technology</h2>
+                <p>Books about advancements in technology and its impact on society.</p>
+            </div>
+            <div class="genre">
+                <h2>Comic</h2>
+                <p>Books featuring comic strips and graphic stories.</p>
+            </div>
+            <div class="genre">
+                <h2>Poetry</h2>
+                <p>Books composed of poems and verse.</p>
+            </div>
+            <div class="genre">
+                <h2>Thriller</h2>
+                <p>Books that are suspenseful and full of excitement.</p>
+            </div>
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    const searchButton = document.querySelector('.btn');
+                    const searchInput = document.querySelector('.search');
+            
+                    searchButton.addEventListener('click', function(event) {
+                        event.preventDefault(); // Prevent the default form submission
+            
+                        const query = searchInput.value.trim().toLowerCase();
+            
+                        if (query === 'fiction') {
+                            window.location.href = '../html/book7.html'; // Redirect to authors.html
+                        } else if (query === 'non-fiction') {
+                            window.location.href = '../html/book1.html';
+                        }  else if (query === 'science-fiction') {
+                            window.location.href = '../html/book8.html';
+                        }  else if (query === 'thriller') {
+                            window.location.href = '../html/book15.html';
+                        }  else if (query === 'romance') {
+                            window.location.href = '../html/book3.html';
+                        }  else if (query === 'paranormal') {
+                            window.location.href = '../html/book4.html';
+                        }  else if (query === 'historical fiction') {
+                            window.location.href = '../html/book5.html';
+                        }  else if (query === 'research') {
+                            window.location.href = '../html/book6.html';
+                        }  else if (query === 'Journalism') {
+                            window.location.href = '../html/book9.html';
+                        }  else if (query === 'Philosophy') {
+                            window.location.href = '../html/book10.html';
+                        }  else if (query === 'Psychology') {
+                            window.location.href = '../html/book11.html';
+                        }  else if (query === 'Technology') {
+                            window.location.href = '../html/book12.html';
+                        }  else if (query === 'comic') {
+                            window.location.href = '../html/book13.html';
+                        } else if (query === 'poetry') {
+                            window.location.href = '../html/book14.html';
+                        }else if (query === 'autobiography') {
+                            window.location.href = '../html/book1.html';
+                        }else {
+                            alert('No results found for your search.'); // Alert if no match
+                        }
+                    
+                    });
+                });
+                </script>
+        </section>
+    </main>
+
+    <footer>
+        <p>2024 Your Company. All rights reserved. Aldren and Samuel</p>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/faith_infotech" target="_blank"><img src="../Icons/insta_icon.png" alt="Instagram Icon"></a>
+            <a href="https://www.facebook.com/Faithinfotechacademytechnopark" target="_blank"><img src="../Icons/facebook_icon.jpg" alt="Facebook Icon"></a>
+            <a href="https://faithinfotechacademy.com" target="_blank"><img src="../Icons/website.jpg" alt="Website Icon"></a>
+        </div>
+    </footer>
+</body>
+</html>

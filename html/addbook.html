@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Book | Admin Dashboard</title>
+    <link rel="stylesheet" href="../css/addbook.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../Icons/logo.png" alt="Library Logo">
+        </div>
+        <div class="header-actions">
+            <a href="../html/profile.html" class="profile-icon">
+                <img src="../Icons/profile.png" alt="Profile Icon">
+            </a>
+            <a href="../html/adminlogin.html" class="logout-button">Logout</a>
+        </div>
+    </header>
+    
+    <div class="container">
+        <aside class="sidebar">
+            <ul>
+                <li><a href="../html/addbook.html">Add Book</a></li>
+                <li><a href="../html/subscriptions.html">List of Subscribed Members</a></li>
+                <li><a href="../html/viewbookstatus.html">View Book Status</a></li>
+            </ul>
+        </aside>
+        
+        <main class="main-content">
+            <h1>Add Book</h1>
+            <button class="add-book-button" onclick="document.getElementById('book-form').style.display='block'">Add Book</button>
+            <div id="book-form" style="display:none;">
+                <input type="file" id="cover-image-input" accept="image/*">
+                <form onsubmit="addBook(); return false;">
+                    <label for="name">Book Name:</label>
+                    <input type="text" id="name" required>
+                    
+                    <label for="author">Author:</label>
+                    <input type="text" id="author" required>
+                    
+                    <label for="genre">Genre:</label>
+                    <input type="text" id="genre" required>
+                    
+                    <label for="rent-price">Rent Price:</label>
+                    <input type="number" id="rent-price" required>
+                    
+                    <label for="rating">Rating:</label>
+                    <input type="number" id="rating" step="0.1" min="0" max="5" required>
+                    
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+            <table id="books-table">
+                <thead>
+                    <tr>
+                        <th>Cover</th>
+                        <th>Name</th>
+                        <th>Author</th>
+                        <th>Genre</th>
+                        <th>Rent Price</th>
+                        <th>Rating</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="books-tbody">
+                    <!-- Existing book entries -->
+                </tbody>
+            </table>
+        </main>
+    </div>
+    
+    <footer>
+        <p>2024 Your Company. All rights reserved. Aldren and Samuel</p>
+    </footer>
+
+    <script>
+        let coverImageBase64 = '';
+
+        document.getElementById('cover-image-input').addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    coverImageBase64 = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+        
+        function addBook() {
+            const name = document.getElementById('name').value;
+            const author = document.getElementById('author').value;
+            const genre = document.getElementById('genre').value;
+            const rentPrice = document.getElementById('rent-price').value;
+            const rating = document.getElementById('rating').value;
+        
+            if (name && author && genre && rentPrice && rating && coverImageBase64) {
+                const table = document.getElementById('books-tbody');
+                const row = table.insertRow();
+                row.insertCell(0).innerHTML = `<img src="${coverImageBase64}" alt="Cover Image" style="width:50px;height:auto;">`;
+                row.insertCell(1).textContent = name;
+                row.insertCell(2).textContent = author;
+                row.insertCell(3).textContent = genre;
+                row.insertCell(4).textContent = `₹${rentPrice}`;
+                row.insertCell(5).textContent = rating;
+                const actionsCell = row.insertCell(6);
+                actionsCell.innerHTML = `
+                    <div class="actions-container">
+                        <button class="edit-button" onclick="editBook(this)">Edit</button>
+                        <button class="delete-button" onclick="deleteBook(this)">Delete</button>
+                    </div>
+                `;
+        
+                saveBooksToStorage();
+                document.getElementById('book-form').reset();
+                coverImageBase64 = '';
+                document.getElementById('book-form').style.display = 'none';
+            }
+        }
+        
+        function editBook(button) {
+            const row = button.closest('tr'); // Using closest() to get the closest parent row
+            const name = prompt("Edit the book's name:", row.cells[1].textContent);
+            const author = prompt("Edit the author's name:", row.cells[2].textContent);
+            const genre = prompt("Edit the genre:", row.cells[3].textContent);
+            const rentPrice = prompt("Edit the rent price:", row.cells[4].textContent.replace('₹', ''));
+            const rating = prompt("Edit the rating:", row.cells[5].textContent);
+        
+            if (name && author && genre && rentPrice && rating) {
+                row.cells[1].textContent = name;
+                row.cells[2].textContent = author;
+                row.cells[3].textContent = genre;
+                row.cells[4].textContent = `₹${rentPrice}`;
+                row.cells[5].textContent = rating;
+        
+                saveBooksToStorage();
+            }
+        }
+        
+        function deleteBook(button) {
+            if (confirm("Are you sure you want to delete this book?")) {
+                const row = button.closest('tr'); // Using closest() to get the closest parent row
+                row.remove();
+                saveBooksToStorage();
+            }
+        }
+        
+        
+        function saveBooksToStorage() {
+            const table = document.getElementById('books-tbody');
+            const books = [];
+            for (let i = 0; i < table.rows.length; i++) {
+                const row = table.rows[i];
+                const book = {
+                    cover: row.cells[0].querySelector('img').src,
+                    name: row.cells[1].textContent,
+                    author: row.cells[2].textContent,
+                    genre: row.cells[3].textContent,
+                    rentPrice: row.cells[4].textContent.replace('₹', ''),
+                    rating: row.cells[5].textContent
+                };
+                books.push(book);
+            }
+            localStorage.setItem('books', JSON.stringify(books));
+        }
+        
+        function loadBooksFromStorage() {
+            const books = JSON.parse(localStorage.getItem('books') || '[]');
+            const table = document.getElementById('books-tbody');
+            table.innerHTML = ''; // Clear existing table rows
+            books.forEach(book => {
+                const row = table.insertRow();
+                row.insertCell(0).innerHTML = `<img src="${book.cover}" alt="Cover Image" style="width:50px;height:auto;">`;
+                row.insertCell(1).textContent = book.name;
+                row.insertCell(2).textContent = book.author;
+                row.insertCell(3).textContent = book.genre;
+                row.insertCell(4).textContent = `₹${book.rentPrice}`;
+                row.insertCell(5).textContent = book.rating;
+                const actionsCell = row.insertCell(6);
+                actionsCell.innerHTML = `
+                    <div class="actions-container">
+                        <button class="edit-button" onclick="editBook(this)">Edit</button>
+                        <button class="delete-button" onclick="deleteBook(this)">Delete</button>
+                    </div>
+                `;
+            });
+        }
+        
+        // Call this function on page load
+        window.onload = function() {
+            loadBooksFromStorage();
+        };
+        
+    </script>
+</body>
+</html>

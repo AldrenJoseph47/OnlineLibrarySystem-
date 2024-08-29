@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Profile</title>
+    <link rel="stylesheet" href="../css/profile.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../Icons/logo.png" alt="Library Logo">
+        </div>
+        <div class="header-actions">
+            <a href="../html/adminlogin.html" class="logout-button">Logout</a>
+        </div>
+    </header>
+    
+    <div class="container">
+        <aside class="sidebar">
+            <ul>
+                <li><a href="../html/addbook.html">Add Book</a></li>
+                <li><a href="../html/subscriptions.html">List of Subscribed Members</a></li>
+                <li><a href="../html/viewbookstatus.html">View Book Status</a></li>
+            </ul>
+        </aside>
+        
+        <main class="main-content">
+            <h1>Admin Profile</h1>
+            <div class="profile-section">
+                <div class="profile-pic">
+                    <img id="profile-image" src="../Icons/profilepic.jpg" alt="Admin Profile Picture">
+                </div>
+                <div class="profile-info">
+                    <h2>Roopak Remesh</h2>
+                    <p>Email: Rupesh@gmail.com</p>
+                    <p>Role: Administrator</p>
+                    <form id="profile-form" enctype="multipart/form-data">
+                        <input type="file" id="profile-picture-input" name="profile-picture" accept="image/*" style="display: none;">
+                        <button type="button" class="change-pic-button" onclick="document.getElementById('profile-picture-input').click();">Change Profile Picture</button>
+                        <button type="submit" class="save-pic-button">Save Profile Picture</button>
+                    </form>
+                    <button class="dashboard-button" onclick="location.href='../html/admin.html'">Admin Dashboard</button>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <footer>
+        <p>2024 Your Company. All rights reserved. Aldren and Samuel</p>
+    </footer>
+    
+    <script>
+        document.getElementById('profile-picture-input').addEventListener('change', function(event) {
+            const reader = new FileReader();
+            reader.onload = function() {
+                const output = document.getElementById('profile-image');
+                output.src = reader.result;
+            };
+            reader.readAsDataURL(event.target.files[0]);
+        });
+
+        document.getElementById('profile-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // Add your code here to handle the form submission and save the new profile picture
+            alert('Profile picture saved successfully.');
+        });
+    </script>
+</body>
+</html>

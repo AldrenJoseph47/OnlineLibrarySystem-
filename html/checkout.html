@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Online Library</title>
+    <link rel="stylesheet" href="../css/checkout.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../Icons/logo.png" alt="Library Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../html/home.html">Home</a></li>
+                <li><a href="../html/genre.html">Genre</a></li>
+                <li><a href="../html/author.html">Authors</a></li>
+                <li><a href="../html/plan.html">Plans</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Select Books to Rent</h1>
+        <form id="checkoutForm" action="../html/payment2.html" method="post">
+            <section class="books">
+                <!-- Book 1 -->
+                <div class="book">
+                    <input type="checkbox" id="book1" name="book1" value="30">
+                    <label for="book1">
+                        <img src="../Icons/Book1.webp" alt="Book 1">
+                        <div class="book-details">
+                            <p class="price">₹30</p>
+                            <p class="genre">Autobiography</p>
+                        </div>
+                        <div class="rating">Rating: 4.5/5</div>
+                    </label>
+                </div>
+                <!-- Book 2 -->
+                <div class="book">
+                    <input type="checkbox" id="book2" name="book2" value="100">
+                    <label for="book2">
+                        <img src="../Icons/Book2.webp" alt="Book 2">
+                        <div class="book-details">
+                            <p class="price">₹100</p>
+                            <p class="genre">Fantasy</p>
+                        </div>
+                        <div class="rating">Rating: 4.0/5</div>
+                    </label>
+                </div>
+                <!-- Book 3 -->
+                <div class="book">
+                    <input type="checkbox" id="book3" name="book3" value="80">
+                    <label for="book3">
+                        <img src="../Icons/Book3.jpeg" alt="Book 3">
+                        <div class="book-details">
+                            <p class="price">₹80</p>
+                            <p class="genre">Romance</p>
+                        </div>
+                        <div class="rating">Rating: 3.5/5</div>
+                    </label>
+                </div>
+                <!-- Book 4 -->
+                <div class="book">
+                    <input type="checkbox" id="book4" name="book4" value="70">
+                    <label for="book4">
+                        <img src="../Icons/Book4.jpeg" alt="Book 4">
+                        <div class="book-details">
+                            <p class="price">₹70</p>
+                            <p class="genre">Paranormal</p>
+                        </div>
+                        <div class="rating">Rating: 4.8/5</div>
+                    </label>
+                </div>
+                <!-- Book 5 -->
+                <div class="book">
+                    <input type="checkbox" id="book5" name="book5" value="50">
+                    <label for="book5">
+                        <img src="../Icons/Book5.jpeg" alt="Book 5">
+                        <div class="book-details">
+                            <p class="price">₹50</p>
+                            <p class="genre">Historical fiction</p>
+                        </div>
+                        <div class="rating">Rating: 4.2/5</div>
+                    </label>
+                </div>
+                <!-- Book 6 -->
+                <div class="book">
+                    <input type="checkbox" id="book6" name="book6" value="30">
+                    <label for="book6">
+                        <img src="../Icons/Book6.jpeg" alt="Book 6">
+                        <div class="book-details">
+                            <p class="price">₹30</p>
+                            <p class="genre">Research</p>
+                        </div>
+                        <div class="rating">Rating: 4.6/5</div>
+                    </label>
+                </div>
+                <!-- Book 7 -->
+                <div class="book">
+                    <input type="checkbox" id="book7" name="book7" value="70">
+                    <label for="book7">
+                        <img src="../Icons/Book7.jpeg" alt="Book 7">
+                        <div class="book-details">
+                            <p class="price">₹70</p>
+                            <p class="genre">Crime fiction</p>
+                        </div>
+                        <div class="rating">Rating: 3.9/5</div>
+                    </label>
+                </div>
+                <!-- Book 8 -->
+                <div class="book">
+                    <input type="checkbox" id="book8" name="book8" value="70">
+                    <label for="book8">
+                        <img src="../Icons/Book8.jpeg" alt="Book 8">
+                        <div class="book-details">
+                            <p class="price">₹70</p>
+                            <p class="genre">Science Fantasy</p>
+                        </div>
+                        <div class="rating">Rating: 4.3/5</div>
+                    </label>
+                </div>
+                <!-- Book 9 -->
+                <div class="book">
+                    <input type="checkbox" id="book9" name="book9" value="30">
+                    <label for="book9">
+                        <img src="../Icons/Book9.png" alt="Book 9">
+                        <div class="book-details">
+                            <p class="price">₹30</p>
+                            <p class="genre">Journalism</p>
+                        </div>
+                        <div class="rating">Rating: 4.1/5</div>
+                    </label>
+                </div>
+                <!-- Book 10 -->
+                <div class="book">
+                    <input type="checkbox" id="book10" name="book10" value="30">
+                    <label for="book10">
+                        <img src="../Icons/Book10.jpeg" alt="Book 10">
+                        <div class="book-details">
+                            <p class="price">₹30</p>
+                            <p class="genre">Philosophy</p>
+                        </div>
+                        <div class="rating">Rating: 4.4/5</div>
+                    </label>
+                </div>
+                <!-- Book 11 -->
+                <div class="book">
+                    <input type="checkbox" id="book11" name="book11" value="50">
+                    <label for="book11">
+                        <img src="../Icons/Book11.jpeg" alt="Book 11">
+                        <div class="book-details">
+                            <p class="price">₹50</p>
+                            <p class="genre">Psychology</p>
+                        </div>
+                        <div class="rating">Rating: 3.8/5</div>
+                    </label>
+                </div>
+                <!-- Book 12 -->
+                <div class="book">
+                    <input type="checkbox" id="book12" name="book12" value="60">
+                    <label for="book12">
+                        <img src="../Icons/Book12.jpeg" alt="Book 12">
+                        <div class="book-details">
+                            <p class="price">₹60</p>
+                            <p class="genre">Technology</p>
+                        </div>
+                        <div class="rating">Rating: 4.7/5</div>
+                    </label>
+                </div>
+                <!-- Book 13 -->
+                <div class="book">
+                    <input type="checkbox" id="book13" name="book13" value="100">
+                    <label for="book13">
+                        <img src="../Icons/Book13.webp" alt="Book 13">
+                        <div class="book-details">
+                            <p class="price">₹100</p>
+                            <p class="genre">Comic</p>
+                        </div>
+                        <div class="rating">Rating: 4.0/5</div>
+                    </label>
+                </div>
+                <!-- Book 14 -->
+                <div class="book">
+                    <input type="checkbox" id="book14" name="book14" value="40">
+                    <label for="book14">
+                        <img src="../Icons/Book14.jpeg" alt="Book 14">
+                        <div class="book-details">
+                            <p class="price">₹40</p>
+                            <p class="genre">Poetry</p>
+                        </div>
+                        <div class="rating">Rating: 3.7/5</div>
+                    </label>
+                </div>
+                <!-- Book 15 -->
+                <div class="book">
+                    <input type="checkbox" id="book15" name="book15" value="70">
+                    <label for="book15">
+                        <img src="../Icons/Book15.jpg" alt="Book 15">
+                        <div class="book-details">
+                            <p class="price">₹70</p>
+                            <p class="genre">Thriller</p>
+                        </div>
+                        <div class="rating">Rating: 4.5/5</div>
+                    </label>
+                </div>
+                <!-- Book 16 -->
+                <div class="book">
+                    <input type="checkbox" id="book16" name="book16" value="30">
+                    <label for="book16">
+                        <img src="../Icons/Book16.jpeg" alt="Book 16">
+                        <div class="book-details">
+                            <p class="price">₹30</p>
+                            <p class="genre">Autobiography</p>
+                        </div>
+                        <div class="rating">Rating: 4.6/5</div>
+                    </label>
+                </div>
+            </section>
+
+            <div class="summary">
+                <p>Subtotal: ₹<span id="subtotal">0</span></p>
+                <button style="background-color: #00796b; color: white; border: none; padding: 15px 30px; border-radius: 5px;
+    font-size: 1em;font-weight: bold;cursor: pointer;transition: background-color 0.3s;margin-top: 20px;
+    text-decoration: none;display: inline-block;" type="submit">Proceed to Payment</button>
+            </div>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Your Company. All rights reserved.</p>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/faith_infotech" target="_blank"><img src="../Icons/insta_icon.png" alt="Instagram Icon"></a>
+            <a href="https://www.facebook.com/Faithinfotechacademytechnopark" target="_blank"><img src="../Icons/facebook_icon.jpg" alt="Facebook Icon"></a>
+            <a href="https://faithinfotechacademy.com" target="_blank"><img src="../Icons/website.jpg" alt="Website Icon"></a>
+        </div>
+    </footer>
+
+    <script src="../js/checkout.js"></script>
+</body>
+</html>
